@@ -9,6 +9,12 @@ def home(request):
     return render(request, 'home.html', {'name':'León ArboledaG'})
 
 
+#def about(request):
+    #return HttpResponse("This is the About Page")
 def about(request):
-    return HttpResponse("This is the About Page")
+    return render(request, 'about.html')
+
+
+
+
 
