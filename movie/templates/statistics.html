@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+    <h3 class="text-center mb-4">Movie Statistics</h3>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <img src="data:image/png;base64,{{ graphic }}" alt="Movie Statistics" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5>Left Chart: Movies per Year</h5>
+                </div>
+                <div class="card-body">
+                    <p>Shows the distribution of movies by release year.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5>Right Chart: Movies per Genre</h5>
+                </div>
+                <div class="card-body">
+                    <p>Shows the distribution of movies by genre (considering only the first genre for each movie).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+    </div>
+</div>
+
+{% endblock content %}
